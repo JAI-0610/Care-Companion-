@@ -1,0 +1,205 @@
+.disclaimer-page {
+  padding: 2rem 0;
+  min-height: calc(100vh - 140px);
+}
+
+.disclaimer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.warning-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #fef3f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--border-radius-lg);
+  margin-bottom: 3rem;
+}
+
+.warning-banner svg {
+  color: #dc2626;
+  flex-shrink: 0;
+}
+
+.warning-banner h3 {
+  color: #dc2626;
+  margin-bottom: 0.25rem;
+}
+
+.warning-banner p {
+  color: #7f1d1d;
+  margin: 0;
+}
+
+.disclaimer-section,
+.limitations-section,
+.emergency-section,
+.user-responsibility,
+.acceptance-section {
+  margin-bottom: 3rem;
+}
+
+.disclaimer-section h2,
+.limitations-section h2,
+.emergency-section h2,
+.user-responsibility h2 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--surface-color);
+  padding-bottom: 0.5rem;
+}
+
+.disclaimer-section p,
+.user-responsibility p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.limitations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.limitation-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.limitation-card svg {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.limitation-card h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+}
+
+.limitation-card p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.emergency-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.emergency-contact {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.emergency-contact:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.emergency-contact.primary {
+  border-color: #dc2626;
+  background: #fef2f2;
+}
+
+.emergency-contact.primary:hover {
+  border-color: #dc2626;
+  background: #fef2f2;
+}
+
+.emergency-contact svg {
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+}
+
+.emergency-contact.primary svg {
+  color: #dc2626;
+}
+
+.emergency-contact div {
+  display: flex;
+  flex-direction: column;
+}
+
+.emergency-contact span:first-child {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.emergency-contact span:last-child {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.emergency-contact.primary span:last-child {
+  color: #dc2626;
+}
+
+.user-responsibility ul {
+  color: var(--text-secondary);
+  padding-left: 1.5rem;
+}
+
+.user-responsibility li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.acceptance-card {
+  background: var(--surface-color);
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+}
+
+.acceptance-card h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.acceptance-card p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .disclaimer-page {
+    padding: 1rem 0;
+  }
+
+  .warning-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .limitations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-contact {
+    padding: 1rem;
+  }
+}

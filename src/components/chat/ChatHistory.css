@@ -1,0 +1,136 @@
+.chat-history {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-history {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #6b7280;
+}
+
+.empty-history-icon {
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+
+.empty-history p {
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.empty-history span {
+  font-size: 0.875rem;
+}
+
+.history-header {
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+
+.history-header h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.history-count {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.sessions-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.session-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 0.25rem;
+}
+
+.session-item:hover {
+  background: #f3f4f6;
+}
+
+.session-active {
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+}
+
+.session-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.session-active .session-icon {
+  background: #2563eb;
+  color: white;
+}
+
+.session-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.session-title {
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.session-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.delete-session-btn {
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  color: #9ca3af;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.session-item:hover .delete-session-btn {
+  opacity: 1;
+}
+
+.delete-session-btn:hover {
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+@media (max-width: 768px) {
+  .chat-history {
+    padding: 1rem;
+  }
+
+  .delete-session-btn {
+    opacity: 1;
+  }
+}
